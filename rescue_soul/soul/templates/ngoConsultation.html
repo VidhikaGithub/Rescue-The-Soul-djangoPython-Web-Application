@@ -1,0 +1,359 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Consultation</title>
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <!--link rel="stylesheet" href="/Projects-Horizontal.css"-->
+    <link rel="stylesheet" href={% static "css/styles.css" %}>
+    <link rel="stylesheet" href={% static "css/main.css" %}>
+    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "css/linearicons.css" %}>
+   <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "css/magnific-popup.css" %}>
+			<link rel="stylesheet" href={% static "css/nice-select.css" %}>
+			<link rel="stylesheet" href={% static "css/animate.min.css" %}>
+			<link rel="stylesheet" href={% static "css/owl.carousel.css" %}>
+			<link rel="stylesheet" href={% static "css/main.css" %}>
+			<link rel="stylesheet" href={% static "css/all.min.css" %}>
+            <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css'%}">
+
+</head>
+
+<body >
+     <header id="header" id="home" style="background-color: black">
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo" >
+				        <a href="home.html">
+                            <img src="{% static "img/rescuelogo.png" %}" alt="" title="" />
+                        </a>
+				      </div>
+				      <nav id="nav-menu-container" style="font-size: larger">
+				        <ul class="nav-menu" style="text-decoration: none">
+                             <li class="menu-active">
+
+                              <a href="{% url 'soul:login_render' %}"
+							  style="color: white; font-size: 15px">
+								  <i class="fas fa-home"></i>
+								  Home
+							  </a>
+						  </li>
+				          <li><a href="{% url 'soul:donate' %}"
+						  style="color: white; font-size: 15px">
+							  <i class="fas fa-hands-helping"></i>
+							  Donate Things
+						  	</a>
+						  </li>
+
+
+				          <li class="menu-has-children">
+							  <a href=""
+							  style="color: white; font-size: 15px">
+							  <i class="fas fa-notes-medical"></i>
+							  Consultation
+						  </a>
+				            <ul>
+				              <li><a href="{% url 'soul:ngoConsultation' %}">NGO Consultation</a></li>
+				              <li><a href="{% url 'soul:vetConsultation' %}">Vet Consultation</a></li>
+				            </ul>
+				          </li>
+				          <li><a href="{% url 'soul:contacts' %}"
+						  		style="color: white; font-size: 15px">
+							  <i class="far fa-address-card"></i>
+							  Contact Us
+						  	</a>
+						  </li>
+                            <li><a href="{% url 'soul:changePassword' %}"
+									style="color: white; font-size: 15px">
+								<i class="fas fa-unlock-alt"></i>
+								Change Password</a>
+							</li>
+
+                            <li>
+								<a href="{% url 'soul:logout' %}"
+								style="color: white; font-size: 15px">
+									<i class="fas fa-sign-out-alt"></i>
+									LogOut
+								</a>
+							</li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+    <section class="callto-top-area section-gap">
+
+        <div class="container">
+            <div class="callto-top-wrap pt-70 pb-90">
+            <div class="intro">
+                <h2 class="text-center">NON GOVERMENTAL ORGANISATIONS </h2>
+                <p class="text-center">
+                    Feel free to reach us. We are just one call away from you.
+                    Available for help 24X7.
+                </p>
+                <br><br><br>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <a href="http://www.prayatn.org/" target="_blank">
+                            <img class="img-fluid" src="{%static 'NGO/prayatn.PNG' %}">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">Prayatn Sanstha</h3>
+                            <p class="description">
+
+                    <b>Website - </b><a href="http://www.prayatn.org/"target="_blank">www.prayatn.org</a><br>
+   <b>Address - </b>68/337, Pratap Nagar, Sanganer, Jaipur - 302033, Rajasthan, India<br>
+   <b>Contact no - </b>+91-141-2792919, +91-9414028004
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <a href="http://www.rhcfngo.org/" target="_blank">
+                            <img class="img-fluid" src="{% static 'NGO/rhcf.PNG' %}">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">RHCF </h3>
+                            <p class="description">
+                               <b>Website - </b>
+                                <a href="http://www.rhcfngo.org/"target="_blank">www.rhcfngo.org
+                                </a>
+                                <br>
+   <b>Address - </b>21, Champa Nagar ,Gurjar ki Thadi,New Sanganer Road, Jaipur - 302033,Rajasthan, India
+                                <br>
+   <b>Contact no - </b>+91 98290-14590 , +91 98290-09006
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <a href="http://www.sidartngo.org/" target="_blank">
+                                <img class="img-fluid" src="{% static 'NGO/sidart.PNG'%}">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">Sidart</h3>
+                            <p class="description">
+                               <b>Website - </b>
+                                <a href="http://www.sidartngo.org/"target="_blank">
+                                    www.sidartngo.org
+                                </a>
+                                <br>
+   <b>Address - </b>4-KHA-17, Jawahar Nagar, Jaipur - 302033,Rajasthan, India
+                                <br>
+   <b>Contact no - </b>+91 141 2650894, +91 9829215633
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <a href="http://www.kbctindia.org/" target="_blank">
+                                <img class="img-fluid" src="{% static 'NGO/kbct.PNG'%}">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">KBCT</h3>
+                            <p class="description">
+                               <b>Website - </b>
+                                <a href="http://www.kbctindia.org/"target="_blank">
+                                    www.kbctindia.org
+                                </a>
+                                <br>
+   <b>Address - </b>155, Maa Hinglaaj Nagar (B) , Gandhi Path ( West) Vaishali Nagar Jaipur –302021,Rajasthan, India
+                                <br>
+   <b>Contact no - </b>+91-7231888800
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <a href="http://www.cfsd.org.in/" target="_blank">
+                                <img class="img-fluid" src="{% static 'NGO/cfsd.PNG'%}">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">CFSD</h3>
+                            <p class="description">
+                               <b>Website - </b>
+                                <a href="http://www.cfsd.org.in/"target="_blank">
+                                    www.cfsd.org.in
+                                </a>
+                                <br>
+   <b>Address - </b>Shiv Colony, Behind Gogiya Petrol Pump, Near Airport Circle, Tonk Road,Jaipur – 302021,Rajasthan, India
+                                <br>
+   <b>Contact no - </b>141-2790135
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</section>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script id="bs-live-reload" data-sseport="3620" data-lastchange="1554729045226" src="/js/livereload.js"></script>
+
+
+
+
+    <!-- start footer Area -->
+			<footer class="footer-area">
+				<div class="container">
+					<div class="row pt-120 pb-80">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p style="color: white; text-align: justify;">
+                                    Our social network has one mission, to help shelter animals get adopted
+                                    and find a loving home. Users or animal care facilities can create profiles
+                                    of shelter pets with photos, videos and detailed descriptions.
+                                    That's why we believe in motto FEEL TOGETHER, HEEL TOGETHER.
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>Useful Links</h6>
+								<div class="row">
+									<ul class="col footer-nav">
+										<li><a href="{% url 'soul:login_render' %}">Home</a></li>
+										<li><a href="{% url 'soul:ngoConsultation' %}">NGO Consulatation</a></li>
+										<li><a href="{% url 'soul:vetConsultation' %}">Vets Consulatation</a></li>
+										<!--li><a href="#">Donate Things</a></li-->
+									</ul>
+									<ul class="col footer-nav">
+										<li><a href="{% url 'soul:donate' %}">Donate Things</a></li>
+										<li><a href="{% url 'soul:contacts' %}">Contact Us</a></li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Contact Us</h6>
+								<ul class="list-contact">
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-home"></span>
+										</div>
+										<div class="detail">
+											<h4>CDAC NETCOM, India</h4>
+											<h4>
+												globe circle,sitapura
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-phone-handset"></span>
+										</div>
+										<div class="detail">
+											<h4>91 89675 23456</h4>
+											<h4>
+												Mon to Fri 9am to 6 pm
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-envelope"></span>
+										</div>
+										<div class="detail">
+											<h4>rescuethesoul@gmail.com</h4>
+											<h4>
+												Send us your query anytime!
+											</h4>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright-text">
+					<div class="container" style="text-align: center">
+						<div class="row footer-bottom d-flex justify-content-between">
+							<p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+								All rights reserved |<i class="fa fa-heart-o" aria-hidden="true"></i>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<div class="col-lg-4 col-sm-6 footer-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->
+
+
+
+<script src={% static "js/vendor/jquery-2.2.4.min.js" %}></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src={% static "js/vendor/bootstrap.min.js" %}></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src={% static "js/easing.min.js" %}></script>
+			<script src={% static "js/hoverIntent.js" %}></script>
+			<script src={% static "js/superfish.min.js" %}></script>
+			<script src={% static "js/jquery.ajaxchimp.min.js" %}></script>
+			<script src={% static "js/jquery.magnific-popup.min.js" %}></script>
+			<script src={% static "js/owl.carousel.min.js" %}></script>
+			<script src={% static "js/jquery.nice-select.min.js" %}></script>
+			<script src={% static "js/mail-script.js" %}></script>
+			<script src={% static "js/main.js" %}></script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="/bootstrap/js/bootstrap.min.js"></script>
+            <script id="bs-live-reload" data-sseport="4629" data-lastchange="1554535687958" src="/js/livereload.js"></script>
+            	<script src={% static "js/vendor/jquery-2.2.4.min.js" %}></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src={% static "js/vendor/bootstrap.min.js" %}></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src={% static "js/easing.min.js" %}></script>
+			<script src={% static "js/hoverIntent.js" %}></script>
+			<script src={% static "js/superfish.min.js" %}></script>
+			<script src={% static "js/jquery.ajaxchimp.min.js" %}></script>
+			<script src={% static "js/jquery.magnific-popup.min.js" %}></script>
+			<script src={% static "js/owl.carousel.min.js" %}></script>
+			<script src={% static "js/jquery.nice-select.min.js" %}></script>
+			<script src={% static "js/mail-script.js" %}></script>
+			<script src={% static "js/main.js" %}></script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="/bootstrap/js/bootstrap.min.js"></script>
+            <script id="bs-live-reload" data-sseport="4629" data-lastchange="1554535687958" src="/js/livereload.js"></script>
+			<script type="text/javascript">
+        function noBack()
+         {
+             window.history.forward();
+         }
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+        window.onunload = function() { void (0) }
+    </script>
+</body>
+
+</html>

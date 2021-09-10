@@ -1,0 +1,337 @@
+
+{% load staticfiles %}
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Contact Us</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{% static "css/linearicons.css" %}">
+			<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+			<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+			<link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+			<link rel="stylesheet" href="{% static "css/nice-select.css" %}">
+			<link rel="stylesheet" href="{% static "css/animate.min.css" %}">
+			<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+			<link rel="stylesheet" href="{% static "css/main.css" %}">
+            <link rel="stylesheet" href={% static "css/all.min.css" %}>
+		</head>
+		<body>
+			  <header id="header" id="home" style="background-color: black">
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="home.html">
+							<img src="{% static "img/rescuelogo.png" %}"
+                                                 alt="" title="" /></a>
+
+                    </div>
+				      <nav id="nav-menu-container" style="font-size: small">
+				        <ul class="nav-menu" style="text-decoration: none">
+
+				          <li class="menu-active">
+
+                              <a href="{% url 'soul:login_render' %}"
+							  style="color: white; font-size: 15px">
+								  <i class="fas fa-home"></i>
+								  Home
+							  </a>
+						  </li>
+				          <!--li><a href="{% url 'soul:donate' %}"
+						  style="color: white; font-size: 15px">
+							  <i class="fas fa-hands-helping"></i>
+							  Donate Things
+						  	</a>
+						  </li-->
+
+
+				          <li class="menu-has-children">
+							  <a href=""
+							  style="color: white; font-size: 15px">
+							  <i class="fas fa-notes-medical"></i>
+							  Consultation
+						  </a>
+				            <ul>
+				              <li><a href="{% url 'soul:ngoConsultation' %}">NGO Consultation</a></li>
+				              <li><a href="{% url 'soul:vetConsultation' %}">Vet Consultation</a></li>
+				            </ul>
+				          </li>
+				          <li><a href="{% url 'soul:donate' %}"
+						  		style="color: white; font-size: 15px">
+							  <i class="far fa-address-card"></i>
+							  Donate Things
+						  	</a>
+						  </li>
+							<li><a href="{% url 'soul:changePassword' %}"
+									style="color: white; font-size: 15px">
+								<i class="fas fa-unlock-alt"></i>
+								Change Password</a>
+							</li>
+
+                            <li>
+								<a href="{% url 'soul:logout' %}"
+								style="color: white; font-size: 15px">
+									<i class="fas fa-sign-out-alt"></i>
+									LogOut
+								</a>
+							</li>
+				        </ul>
+				      </nav>
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<!--section class="banner-area relative" id="home" style="margin-top: 105px">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Contact Us
+							</h1>
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+						</div>
+					</div>
+				</div>
+			</section-->
+			<!-- End banner Area -->
+
+
+
+             <!-- Start contact-page Area -->
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="row">
+                                <div class="mapouter"><div class="gmap_canvas">
+                                    <iframe width="1080" height="367" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=cdac%20netcom%2Csitapura%
+                                            2Cjaipur%2Cindia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+                                    </iframe> <a href="https://www.pureblack.de"></a>
+                                </div><style>.mapouter {position:relative;text- align:right;height:367px;
+                                    width:1080px;}.g map_canvas {overflow:hidden;background:none!important;height:367px;width:1080px;}
+                          </style></div>
+
+                        <div class="col-lg-4 d-flex flex-column address-wrap" style="margin-top: 80px">
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-home"></span>
+								</div>
+								<div class="contact-details">
+									<h5>CDAC ATC NETCOM, India</h5>
+									<p>Globe Circle,Sitapura</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-phone-handset"></span>
+								</div>
+								<div class="contact-details">
+									<h5>89765 45678</h5>
+									<p>Mon to Fri 9am to 6 pm</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-envelope"></span>
+								</div>
+								<div class="contact-details">
+									<h5>rescuethesoul@gmail.com</h5>
+									<p>Send us your query anytime!</p>
+								</div>
+							</div>
+						</div>
+
+                        <div class="col-lg-8" style="margin-top: 80px">
+							<form class="form-area" method="POST" class="contact-form text-right">
+                                {% csrf_token %}
+								<div class="row">
+									<div class="col-lg-6 form-group">
+										<input type="text" name="name" id="name"
+                                               placeholder="Enter your name"
+                                               class="common-input mb-20 form-control" required>
+
+										<input type="email" name="email" id="email"
+                                               placeholder="Enter email address"
+                                               class="common-input mb-20 form-control" required>
+
+										<input type="text" name="subject" id="subject"
+                                               placeholder="Enter your subject"
+                                               class="common-input mb-20 form-control" required>
+									</div>
+									<div class="col-lg-6 form-group">
+										<textarea type="text" class="common-textarea form-control"
+                                                  id="message" name="message" placeholder="Message"
+                                                  required>
+
+                                        </textarea>
+									</div>
+									<div class="col-lg-12 d-flex justify-content-between">
+
+										<button class="genric-btn primary circle"
+                                                style="alignment: right" type="submit"
+                                                href="{% url 'soul:contacts' %}">
+                                            Send Message</button>
+									</div>
+                                </div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End contact-page Area -->
+
+			  <!-- start footer Area -->
+			<footer class="footer-area" >
+				<div class="container">
+					<div class="row pt-120 pb-80">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p style="color: white; text-align: justify;">
+                                    Our social network has one mission, to help shelter animals get adopted
+                                    and find a loving home. Users or animal care facilities can create profiles
+                                    of shelter pets with photos, videos and detailed descriptions.
+                                    That's why we believe in motto FEEL TOGETHER, HEEL TOGETHER.
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>Useful Links</h6>
+								<div class="row">
+									<ul class="col footer-nav">
+										<li><a href="{% url 'soul:homepage' %}">Home</a></li>
+										<li><a href="{% url 'soul:ngoConsultation' %}">NGO Cunsultation</a></li>
+										<li><a href="{% url 'soul:vetConsultation' %}">Vets Consultation</a></li>
+
+									</ul>
+									<ul class="col footer-nav">
+                                        <li><a href="{% url 'soul:donate' %}">Donate Things</a></li>
+										<li><a href="{% url 'soul:contacts' %}">Contact Us</a></li>
+
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Contact Us</h6>
+								<ul class="list-contact">
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-home"></span>
+										</div>
+										<div class="detail">
+											<h4>CDAC NETCOM, India</h4>
+											<h4>
+												globe circle,sitapura
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-phone-handset"></span>
+										</div>
+										<div class="detail">
+											<h4>91 89675 23456</h4>
+											<h4>
+												Mon to Fri 9am to 6 pm
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-envelope"></span>
+										</div>
+										<div class="detail">
+											<h4>rescuethesoul@gmail.com</h4>
+											<h4>
+												Send us your query anytime!
+											</h4>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright-text">
+					<div class="container" style="text-align: center">
+						<div class="row footer-bottom d-flex justify-content-between">
+							<p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+								All rights reserved |<i class="fas fa-heart" aria-hidden="true"></i>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<div class="col-lg-4 col-sm-6 footer-social">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>
+			<script src="js/mail-script.js"></script>
+			<script src="js/main.js"></script>
+            <script src={% static "js/vendor/jquery-2.2.4.min.js" %}></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src={% static "js/vendor/bootstrap.min.js" %}></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src={% static "js/easing.min.js" %}></script>
+			<script src={% static "js/hoverIntent.js" %}></script>
+			<script src={% static "js/superfish.min.js" %}></script>
+			<script src={% static "js/jquery.ajaxchimp.min.js" %}></script>
+			<script src={% static "js/jquery.magnific-popup.min.js" %}></script>
+			<script src={% static "js/owl.carousel.min.js" %}></script>
+			<script src={% static "js/jquery.nice-select.min.js" %}></script>
+			<script src={% static "js/mail-script.js" %}></script>
+			<script src={% static "js/main.js" %}></script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="/bootstrap/js/bootstrap.min.js"></script>
+            <script id="bs-live-reload" data-sseport="4629" data-lastchange="1554535687958" src="/js/livereload.js"></script>
+			<script type="text/javascript">
+        function noBack()
+         {
+             window.history.forward();
+         }
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+        window.onunload = function() { void (0) }
+    </script>
+		</body>
+	</html>

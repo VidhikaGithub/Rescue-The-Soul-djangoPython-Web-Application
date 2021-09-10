@@ -1,0 +1,517 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href={% static "img/fav.png" %}>
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Rescue Soul</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href={% static "css/linearicons.css" %}>
+			<link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+			<link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+			<link rel="stylesheet" href={% static "css/magnific-popup.css" %}>
+			<link rel="stylesheet" href={% static "css/nice-select.css" %}>
+			<link rel="stylesheet" href={% static "css/animate.min.css" %}>
+			<link rel="stylesheet" href={% static "css/owl.carousel.css" %}>
+			<link rel="stylesheet" href={% static "css/main.css" %}>
+			<link rel="stylesheet" href={% static "css/all.min.css" %}>
+            <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css'%}">
+
+        <style>
+         .carousel-inner img {
+      		width: 100%;
+      		height: 50%;
+  			}
+			.portfolio_container {
+  position: relative;
+  width: 50%;
+}
+
+.portfolio_image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color:rgba(0%,0%,0%,0.5);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.portfolio_container:hover .portfolio_overlay {
+  width: 100%;
+  left: 0;
+}
+
+.portfolio_text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.image_size{
+	height: 300px;
+  width: 100%;
+}
+  </style>
+		</head>
+		<body>
+			   <header id="header" id="home" style="background-color: black">
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo" >
+				        <a href="home.html"><img src="{% static "img/rescuelogo.png" %}" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container" style="font-size: larger">
+				        <ul class="nav-menu" style="text-decoration: none">
+                             <li><a href="{% url 'soul:login' %}"
+							 		style="color: white; font-size: 15px">
+								 <i class="fas fa-sign-in-alt"></i>
+									Login
+							 	</a>
+							 </li>
+                            <li><a href="{% url 'soul:register' %}"
+									style="color: white; font-size: 15px">
+								<i class="fas fa-user-plus"></i>
+									SignUp
+								</a>
+							</li>
+				          <li class="menu-active">
+
+                              <a href="{% url 'soul:homepage' %}"
+							  style="color: white; font-size: 15px">
+								  <i class="fas fa-home"></i>
+								  Home
+							  </a>
+						  </li>
+				          <li><a href="{% url 'soul:login' %}"
+						  style="color: white; font-size: 15px">
+							  <i class="fas fa-hands-helping"></i>
+							  Donate Things
+						  	</a>
+						  </li>
+
+
+				          <li class="menu-has-children">
+							  <a href=""
+							  style="color: white; font-size: 15px">
+							  <i class="fas fa-notes-medical"></i>
+							  Consultation
+						  </a>
+				            <ul>
+				              <li><a href="{% url 'soul:login' %}">NGO Consultation</a></li>
+				              <li><a href="{% url 'soul:login' %}">Vet Consultation</a></li>
+				            </ul>
+				          </li>
+				          <li><a href="{% url 'soul:login' %}"
+						  		style="color: white; font-size: 15px">
+							  <i class="far fa-address-card"></i>
+							  Contact Us
+						  	</a>
+						  </li>
+				          <li><a href="{% url 'soul:app' %}" style="color: white; font-size: 15px">
+							  <i class="fas fa-mobile-alt"></i>
+							  Get Our App
+						  </a>
+						  </li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area
+			<section class="banner-area relative" id="home">
+				<div class="container">
+					<div class="overlay overlay-bg"></div>
+					<div class="row fullscreen d-flex align-items-center justify-content-start">
+						<div class="banner-content col-lg-8 col-md-12">
+							<h1 class="text-uppercase">
+								Adopt Us. <br>
+								We need your help.
+							</h1>
+							<p class="text-white sub-head">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+								or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+							</p>
+							<a href="#" class="primary-btn header-btn text-uppercase">Find a pet to adopt</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			End banner Area
+			-->
+
+			<!-- Start image-carusel Area
+			<section class="image-carusel-area">
+				<div class="container">
+					<div class="row">
+						<div class="active-image-carusel">
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+							<div class="single-image-carusel">
+								<img class="img-fluid" src= alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			 End image-carusel Area -->
+
+            <div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 105px;">
+
+              <!-- Indicators -->
+                <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static "img/cat3.jpg" %}" alt="" style="width:1370px; height:650px" >
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static "img/dogcat.jpg" %}" alt="" style="width:1370px; height:650px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static "img/cat2.jpg" %}" alt="" style="width:1370px; height:650px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static "img/dog3.jpg" %}" alt="" style="width:1370px; height:650px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static "img/dogHumanBanner.jpg" %}" alt="" style="width:1370px; height:650px">
+                    </div>
+
+                </div>
+
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+
+
+			<!-- Start callto-top Area -->
+			<section class="callto-top-area section-gap">
+				<div class="container">
+					<div class="row justify-content-between callto-top-wrap pt-40 pb-40">
+						<div class="col-lg-12">
+							<center><h2>What We Do</h2></center>
+						</div>
+						<div class="col-lg-6 callto-top-left text-justify">
+							<br><p>For the pet lovers out there, the special bond between you and your furry/feathery
+                            friend is something that only someone who owns a pet can truly understand.
+                            Happily, the surge of social networking sites has created a wave of petworking sites,
+                            on which fellow pet owners can connect.
+
+
+                                </p>
+						</div>
+
+
+
+
+                        <div class="col-lg-6 callto-top-left text-justify">
+							<br><p>
+                            Our social network has one mission, to help shelter animals get adopted and find a
+                            loving home. Users or animal care facilities can create profiles of shelter pets with
+                            photos, videos and detailed descriptions.
+                            That's why we believe in motto FEEL TOGETHER, HEEL TOGETHER.
+                                </p>
+						</div>
+					</div>
+                </div>
+			</section>
+			<!-- End callto-top Area -->
+
+
+			  <!-- Start Portfolio Area -->
+			<section >
+				<h2 style="text-align: center;">Portfolio</h2>
+				<div class="row">
+					<div class="portfolio_container col">
+						<img src="{% static 'img/cat2.jpg' %}" alt="Cat"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Cat healed by us.
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio_container col">
+						<img src="{% static 'img/bird2.jpg' %}" alt="Bird"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Bird healed by us.
+							</div>
+						</div>
+					</div>
+
+
+					<div class="portfolio_container col">
+						<img src="{% static 'img/monkey.jpg' %}" alt="Monkey"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Monkey healed by us.
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<br>
+
+
+
+				<div class="row">
+					<div class="portfolio_container col">
+						<img src="{% static 'img/sparrow.jpg' %}" alt="Sparrow"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Sparrow healed by us.
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio_container col">
+						<img src="{% static 'img/dog(candu).jpg' %}" alt="Dog"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Dog healed by us.
+							</div>
+						</div>
+					</div>
+
+
+					<div class="portfolio_container col">
+						<img src="{% static 'img/bird3.jpg' %}" alt="Bird"
+							 class="portfolio_image image_size">
+						<div class="portfolio_overlay">
+							<div class="portfolio_text">
+								Bird healed by us.
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<br><br><br>
+			</section>
+			<!-- End Portfolio Area -->
+
+
+
+
+
+
+			<!-- Start calltoaction Area -->
+			<section class="calltoaction-area section-gap relative">
+				<div class="container">
+					<div class="overlay overlay-bg"></div>
+					<div class="row align-items-center justify-content-center">
+						<h1 class="text-white">Want to help? Become a Volunteer</h1>
+
+						<div class="buttons d-flex flex-row">
+
+							<br><a href="{% url 'soul:register' %}" class="primary-btn text-uppercase">Register now</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End calltoaction Area -->
+
+            <!-- start footer Area -->
+			<footer class="footer-area">
+				<div class="container">
+					<div class="row pt-120 pb-80">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p style="color: white; text-align: justify;">
+                                    Our social network has one mission, to help shelter animals get adopted
+                                    and find a loving home. Users or animal care facilities can create profiles
+                                    of shelter pets with photos, videos and detailed descriptions.
+                                    That's why we believe in motto FEEL TOGETHER, HEEL TOGETHER.
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-footer-widget">
+								<h6>Useful Links</h6>
+								<div class="row">
+									<ul class="col footer-nav">
+										<li><a href="{% url 'soul:homepage' %}">Home</a></li>
+										<li><a href="{% url 'soul:login' %}">NGO Consulatation</a></li>
+                                        <li><a href="{% url 'soul:login' %}">Vets Consulatation</a></li>
+
+									</ul>
+									<ul class="col footer-nav">
+                                        <li><a href="{% url 'soul:login' %}">Donate Things</a></li>
+										<li><a href="{% url 'soul:login' %}">Contact Us</a></li>
+
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Contact Us</h6>
+								<ul class="list-contact">
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-home"></span>
+										</div>
+										<div class="detail">
+											<h4>CDAC NETCOM, India</h4>
+											<h4>
+												globe circle,sitapura
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-phone-handset"></span>
+										</div>
+										<div class="detail">
+											<h4>91 89675 23456</h4>
+											<h4>
+												Mon to Fri 9am to 6 pm
+											</h4>
+										</div>
+									</li><br>
+									<li class="flex-row d-flex">
+										<div class="icon">
+											<span class="lnr lnr-envelope"></span>
+										</div>
+										<div class="detail">
+											<h4>rescuethesoul@gmail.com</h4>
+											<h4>
+												Send us your query anytime!
+											</h4>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright-text">
+					<div class="container" style="text-align: center">
+						<div class="row footer-bottom d-flex justify-content-between">
+							<p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+								All rights reserved |<i class="fas fa-heart" aria-hidden="true"></i>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<div class="col-lg-4 col-sm-6 footer-social">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->
+
+
+			<script src={% static "js/vendor/jquery-2.2.4.min.js" %}></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src={% static "js/vendor/bootstrap.min.js" %}></script>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src={% static "js/easing.min.js" %}></script>
+			<script src={% static "js/hoverIntent.js" %}></script>
+			<script src={% static "js/superfish.min.js" %}></script>
+			<script src={% static "js/jquery.ajaxchimp.min.js" %}></script>
+			<script src={% static "js/jquery.magnific-popup.min.js" %}></script>
+			<script src={% static "js/owl.carousel.min.js" %}></script>
+			<script src={% static "js/jquery.nice-select.min.js" %}></script>
+			<script src={% static "js/mail-script.js" %}></script>
+			<script src={% static "js/main.js" %}></script>
+            <script src="/js/jquery-3.2.1.min.js"></script>
+            <script src="/bootstrap/js/bootstrap.min.js"></script>
+            <script id="bs-live-reload" data-sseport="4629" data-lastchange="1554535687958" src="/js/livereload.js"></script>
+			<script type="text/javascript">
+        function noBack()
+         {
+             window.history.forward();
+         }
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+        window.onunload = function() { void (0) }
+    </script>
+		</body>
+	</html>
